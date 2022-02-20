@@ -1,0 +1,5 @@
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic users-log
+kafka-topics.bat --list --bootstrap-server localhost:9092
+kafka-console-producer.bat --broker-list localhost:9092 --topic test
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
